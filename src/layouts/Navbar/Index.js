@@ -6,8 +6,8 @@ import logo from '../../assets/white_logo.png'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
-  { name: 'About Us', href: '#', current: false },
-  { name: 'What We Do', href: '#', current: false },
+  { name: 'About Us', href: '/about', current: false },
+  { name: 'What We Do', href: '/work', current: false },
   { name: 'Media', href: '#', current: false },
   { name: 'Contact', href: '#', current: false },
   { name: 'Donate', href: '#', current: true },
@@ -15,11 +15,13 @@ const navigation = [
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
+
 }
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-blue-800 text-white">
+    <Disclosure as="nav" className="bg-white text-black sticky top-0 z-[100]  bg-black">
+      
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -47,7 +49,7 @@ export default function Example() {
           
                   <Link to="/">
                     <img
-                      className="hidden lg:block h-8 w-auto"
+                      className="hidden lg:block h-8 w-auto "
                       src={logo}
                       alt="Workflow"
                     />

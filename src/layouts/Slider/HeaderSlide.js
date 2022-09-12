@@ -3,17 +3,15 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ImageSlider = ({ slides }) => {
   return (
-    <div className="container ">
-      <div className=" w-full">
-        <Carousel infiniteLoop showThumbs={false} autoPlay={true}>
+    <div className="w-full ">
+      <div className="w-full ">
+        <Carousel infiniteLoop showThumbs={false} autoPlay={true} className=''>
           {slides.map((slide, index) => {
             return (
               <img
-                className="w-16 md:w-32 lg:w-48"
+                className = 'w-[100%] w-[60vh] lg:h-[100vh]'
                 key={index}
                 src={slide.image}
-                // height="350px"
-                // width="800px"
               />
             );
           })}
